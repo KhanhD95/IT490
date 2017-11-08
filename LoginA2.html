@@ -1,0 +1,128 @@
+
+<script>
+
+functon f()
+{
+
+	var ptrA = document.getElementById("A");
+	var ptrC = document.getElementById("C");
+	
+	var ptrUser = document.getElementById("user");
+	var userValue = ptrUser.value;
+	var trimmedUserValue = userValue.trim();
+	
+	var ptrPass = document.getElementById("pass");
+	var passValue = ptrPass.value;
+	var trimmedPassValue = passValue.trim();
+
+	if (!ptrA.checked && !ptrC.checked)
+	{
+		alert('Choose an input!');
+		return false;
+	}
+	
+	if (trimmedUserValue == "")
+	{
+		alert ('Invalid input');
+		return false;
+	}
+	
+	if (trimmedPassValue == "")
+	{
+		alert('Invalid input');
+		return false;
+	}
+
+}
+
+</script>
+
+<style>
+
+fieldset
+{
+	border-radius: 25px;
+    border: 1px solid #1E90FF;
+    width: 100%;
+    
+ 
+    display: inlign-block;
+ 
+	background: #42d4f4;
+}
+
+.container {
+    height:auto;
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+    
+
+}
+
+.testbox {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+.radio1 {  
+  align: left;
+  
+}
+
+.title1 {
+  text-align: center;
+  font-family : Impact;
+  font-size: 45px;
+  color: #000000;
+  font-variant: normal;
+  font-weight: 500;
+  font-height:0px;
+
+}
+  
+
+</style>
+<body>
+
+<div class = "title1">
+Welcome to our site!
+</div>
+<div class="container">
+<form action = "LoginA2.php" onsubmit = "f()">
+
+<fieldset>
+<div class="testbox">
+
+	<b>User<b>: &nbsp &nbsp &nbsp &nbsp &nbsp <input type = text   name ="user"  id ="user" 
+		autocomplete = "off"	
+		required
+		autofocus = "on"
+		placeholder = "Enter User"
+		><br><br>
+	
+	
+	<b>Password<b>: &nbsp <input type = text   name = "pass"  id="pass" 
+		autocomplete = "off"
+		required
+		placeholder = "Enter Password"
+		><br><br>
+<div class = "radio1">	
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	<input type = radio name = "type" value = "A" >  Administrator<br><br>
+	
+<input type = radio name = "type" value = "C" > Customer<br><br>
+	
+	<input type = submit>
+</div>
+
+</div>
+	
+	</fieldset>
+	
+ 
+	</form>
+ 
+ </div>
+
+ 
+ </body>
